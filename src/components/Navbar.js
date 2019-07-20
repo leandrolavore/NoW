@@ -16,10 +16,10 @@ const Navbar =(props)=> {
                 </div>
                     <ul className="navlist">
                         <li>
-                            <a href="/">link</a>
+                            <a href="/"><img style={{height: "40px", width: "40px"}} src={require("../links/git-white.png")}/></a>
                         </li>
                         <li>
-                            <a href="/">link</a>
+                            <a href="/"><img style={{height: "40px", width: "40px"}} src={require("../links/linkedin.ico")}/></a>
                         </li>
                     </ul>
                
