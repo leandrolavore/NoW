@@ -1,0 +1,562 @@
+body, html {
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: auto;
+}
+
+div#root {
+  height: 100%;
+  min-height: 100%;
+}
+
+.backlogo {
+  background-image: url("./NowLogo.png");
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 250px;
+}
+
+img {
+  border: 0px;
+}
+
+.navlink {
+  margin: 5px;
+}
+
+.navheader {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: #0e0d0d;
+  color: white;
+}
+
+.navheader .desktopnav {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .navheader .desktopnav {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 480px) {
+  .space {
+    display: none;
+  }
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  z-index: 20;
+}
+
+@media (min-width: 480px) {
+  .nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
+  }
+}
+
+@media (min-width: 480px) {
+  .desktopnav {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+
+.navlogodiv {
+  padding-left: 1em;
+}
+
+@media (min-width: 480px) {
+  .navlogodiv {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    left: auto;
+    right: auto;
+  }
+  .navlogodiv .navlogo {
+    text-align: center;
+    font-size: 300%;
+    font-weight: bold;
+    margin: 0em;
+    padding: 0em;
+    margin-right: 0.5em;
+  }
+}
+
+.space {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media (min-width: 480px) {
+  .space {
+    display: none;
+  }
+}
+
+.navlist {
+  width: 100%;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  color: #8b8b8b;
+}
+
+@media (min-width: 480px) {
+  .navlist {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    margin-left: 0px;
+    left: 0px;
+    padding: 0px;
+  }
+}
+
+.navlist li {
+  padding: 0.5em;
+}
+
+@media (min-width: 480px) {
+  .navlist li {
+    padding-right: 1em;
+    margin-right: 1em;
+  }
+}
+
+a {
+  color: #8b8b8b;
+  text-decoration: none;
+  list-style: none;
+}
+
+div#appcontainer {
+  position: relative;
+  top: 90px;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  min-height: 100%;
+}
+
+@media (min-width: 480px) {
+  div#appcontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+  }
+  div#appcontainer div#newscontainer {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  div#appcontainer div#newscontainer a {
+    color: #0e0d0d;
+  }
+}
+
+.maintitle {
+  color: #0e0d0d;
+  width: 100%;
+  position: fixed;
+  top: 45px;
+  background-color: white;
+  z-index: 10;
+  border-bottom: 2px solid #8a8a8a;
+}
+
+@media (min-width: 480px) {
+  .maintitle {
+    text-align: center;
+  }
+}
+
+.weatherholder {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .weatherholder {
+    position: fixed;
+    display: block;
+    right: 3%;
+    top: 20%;
+    z-index: 10;
+    width: 20%;
+    font-size: small;
+  }
+}
+
+.weathercontainer {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .weathercontainer {
+    position: fixed;
+    display: block;
+    color: #0e0d0d;
+    right: 3%;
+    top: 20%;
+    z-index: 10;
+  }
+  .weathercontainer .weathertable {
+    border: 3px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c5deea+0,8abbd7+31,066dab+100;Web+2.0+Blue+3D+%231 */
+    background: #c5deea;
+    /* Old browsers */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#c5deea), color-stop(31%, #8abbd7), to(#066dab));
+    background: linear-gradient(to right, #c5deea 0%, #8abbd7 31%, #066dab 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#066dab',GradientType=1 );
+    /* IE6-9 */
+    border-width: 1px;
+  }
+}
+
+div#newscontainer {
+  position: relative;
+  color: #0e0d0d;
+  width: 100%;
+  margin-left: 5%;
+  margin-top: 10%;
+  font-size: 10px;
+}
+
+div#newscontainer .new {
+  width: 90%;
+  background-color: #e2e2e293;
+  border-width: 1px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
+  margin: 1em;
+}
+
+div#newscontainer .new .desc {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  padding: 0px;
+  margin: 0em 1em 0.5em 1em;
+}
+
+div#newscontainer .newimg {
+  padding: 1em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 90%;
+  max-height: 100%;
+}
+
+div#newscontainer .mainglobe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: 8.5em;
+  margin-right: auto;
+}
+
+@media (min-width: 480px) {
+  div#newscontainer .mainglobe {
+    height: 6em;
+    width: 6em;
+    top: -5em;
+    left: 7.6em;
+  }
+}
+
+.searchcontainer {
+  position: absolute;
+  top: 120px;
+  left: auto;
+  right: auto;
+  border: 3px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 480px) {
+  .searchcontainer {
+    position: absolute;
+    left: 33%;
+    width: 70%;
+    background-color: #ffffffa2;
+    border-width: 1px;
+  }
+}
+
+.searchcontainer .box {
+  top: em;
+  left: auto;
+  right: auto;
+  margin-left: 5em;
+  position: fixed;
+  z-index: 15;
+}
+
+.searchcontainer .globecontainer {
+  top: 30%;
+  margin: 2em;
+  left: auto;
+  right: auto;
+}
+
+.searchcontainer .resultcontainer {
+  width: 100%;
+  position: fixed;
+  padding: 0px;
+  margin-top: 5%;
+  z-index: 5;
+  background-color: #ffffffa2;
+  border-width: 1px;
+  line-height: 1.5;
+  margin-left: 1em;
+  margin-left: 0px;
+}
+
+@media (min-width: 480px) {
+  .searchcontainer .resultcontainer {
+    z-index: 55;
+    position: absolute;
+    top: 8%;
+    border-width: 3px;
+    border-color: #a1a1a1a2;
+    background-color: #ffffffa2;
+  }
+}
+
+.searchcontainer .resultcontainer .resulttitle {
+  position: relative;
+  font-size: 80%;
+  color: #0e0d0d;
+  margin-left: 1em;
+  width: 85%;
+  z-index: 5;
+}
+
+.searchcontainer .resultcontainer .resulttitle a {
+  color: #0e0d0d;
+}
+
+.searchcontainer .resultcontainer .resulttitle a .a[href] {
+  cursor: pointer;
+}
+
+.searchcontainer img#globe {
+  margin: 70px 70px 70px 70px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: absolute;
+  z-index: 10;
+  left: 5em;
+}
+
+.searchlogo {
+  background-image: url("./NowLogo.png");
+  position: relative;
+  top: 15em;
+  margin-left: 5.5em;
+  z-index: -50;
+}
+
+@media (min-width: 480px) {
+  .searchlogo {
+    position: fixed;
+    top: 20em;
+    margin-left: 5.5em;
+    z-index: -50;
+  }
+}
+
+.searchlogo .imgdiv {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.previouscontainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  top: 90px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.previouscontainer .prevtitle {
+  top: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.previouscontainer .prevp {
+  margin-top: 5em;
+}
+
+.previouscontainer .previouspage {
+  position: absolute;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5em;
+  margin-left: 5%;
+  width: 100%;
+  height: 35%;
+  overflow: hidden;
+}
+
+.previouscontainer .previouspage .page {
+  margin: 5px;
+}
+
+.previouscontainer .linkcontainer {
+  position: fixed;
+  bottom: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  height: 30%;
+  border-width: 1px;
+}
+
+@media (min-width: 480px) {
+  .previouscontainer .linkcontainer {
+    width: 80%;
+    left: 1em;
+  }
+}
+
+.previouscontainer .linkcontainer .prevlink {
+  position: absolute;
+  margin-left: 1em;
+  padding: 0.5em;
+}
+
+.previouscontainer .linkcontainer .img {
+  position: absolute;
+}
+
+.footbar {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #0e0d0d;
+  color: #0e0d0d;
+  bottom: 0;
+  z-index: 20;
+}
+
+@media (min-width: 480px) {
+  .footbar {
+    display: none;
+  }
+}
+
+.footbar img {
+  width: 30px !important;
+  height: 30px !important;
+  margin: 10px;
+}
+/*# sourceMappingURL=Now.css.map */
